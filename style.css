@@ -1,0 +1,15 @@
+/* style.css */
+
+body {
+    margin: 0;
+    font-family: Arial , sans-serif;
+    text-align: center;
+}
+@media (max-width: 450px) {
+    body {
+        display:block;
+        background-color: #f4f4f4;
+        color: #333;
+        padding: 20px;
+    }
+}
