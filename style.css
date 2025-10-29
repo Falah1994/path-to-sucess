@@ -1,15 +1,52 @@
-/* style.css */
+/* Google Font Imports */
+@import url(https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kavoon&display=swap);
 
+/* Base Styles */
 body {
     margin: 0;
-    font-family: Arial , sans-serif;
+    font-family: 'Inter' , sans-serif;
     text-align: center;
 }
+
+/* Mobile Only */ 
 @media (max-width: 450px) {
     body {
         display:block;
-        background-color: #f4f4f4;
-        color: #333;
         padding: 20px;
     }
+
+/* Font Styles */
+h1, h2 {
+    font-family: 'Kavoon', cursive;}
+}
+body, p, h3,li,a,span {
+    font-family: 'Inter', sans-serif;
+}
+/* Font Sizes */
+h1{
+    font-size: 3em;
+    color: #484FB7;
+
+}
+nav h2{
+    font-size: 1.5em;
+    color: #6b8fe7;
+}
+h2{
+    font-size: 2em;
+    color: #4ca720;
+}
+h3{
+    font-size: 1.5em;
+}
+/* Color Pallete */
+:root {
+    --teal: #4ca7c0;
+    --purple: #484FB7;
+    --lavender: #6b8fe7;
+    --yellow: #e9bb57;
+    --pink: #d9526f;
+    --dark-gray:#1E1E1E;
+    --white: #ffffff;
+
 }
