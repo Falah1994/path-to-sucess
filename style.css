@@ -1,46 +1,47 @@
-/* Google Font Imports */
+/* CSS BY (Falah Muhammad) */
+
+
+/* IMPORTED FONTS */
 @import url(https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kavoon&display=swap);
 
-/* Base Styles */
-body {
-    margin: 0;
-    font-family: 'Inter' , sans-serif;
-    text-align: center;
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Mobile Only */ 
-@media (max-width: 450px) {
-    body {
-        display:block;
-        padding: 20px;
-    }
+/*Global Styles*/
 
-/* Font Styles */
-h1, h2 {
-    font-family: 'Kavoon', cursive;}
+html,body{height:100%}
+body{
+    margin:0;
+    font-family: 'Kavoon','Inter', sans-serif;
+    background: var(--lavender);
+    color: var(--white);
 }
-body, p, h3,li,a,span {
-    font-family: 'Inter', sans-serif;
-}
-/* Font Sizes */
-h1{
-    font-size: 3em;
-    color: #484FB7;
 
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
 }
-nav h2{
-    font-size: 1.5em;
-    color: #6b8fe7;
+
+button, input, textarea, select {
+  font: inherit;
 }
-h2{
-    font-size: 2em;
-    color: #4ca720;
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
-h3{
-    font-size: 1.5em;
+
+ul, ol {
+  list-style: none;
 }
-/* Color Pallete */
+
+/* ROOT VARIABLES */
 :root {
+    --page-max: 450px;
     --teal: #4ca7c0;
     --purple: #484FB7;
     --lavender: #6b8fe7;
@@ -48,5 +49,60 @@ h3{
     --pink: #d9526f;
     --dark-gray:#1E1E1E;
     --white: #ffffff;
-
 }
+
+/* WRAPPER */
+.wrapper {width:min(100%, var(--page-max));  margin-inline:auto}
+
+/*Header*/
+.site-header {
+    background: var(--purple);
+    padding: 28px 16px 18px;
+    text-align: center;
+    border-radius: 0 0 6px 6px;
+}
+.site-title{
+    margin:0;
+    font-weight:900;
+    letter-spacing:.3px;
+    text-align: center;
+    font-size:34px;
+}
+.site-sub{
+    margin:6px 0 0;
+    color: var(--white);
+    font-weight:100;
+    text-align: center;
+    padding: 20px;
+    font-size:14px;
+}
+/*Menu*/
+.menu{
+    background: var(--yellow);
+    padding:14px;
+    border-radius:0 0 6px 6px;
+}
+.menu h2{
+    margin:2px 0 10px;
+    text-align:center;
+    font-size:16px;
+    font-weight:900;
+    letter-spacing:.6px;
+    color:#1E1E1E
+}
+.menu-list{
+    display:grid;
+    gap:10px;
+}
+.menu-list a{
+    display:block;
+    text-align:center;
+    padding:12px 14px;
+    background: var(--white);
+    Color:#6b8fe7 ;
+    font-weight:800;
+    border-radius:8px;
+    border:2px solid rgba(0,0,0,.08);
+    text-decoration:none;  
+}
+.menu-list a:hover{filter:brightness(.98)}
