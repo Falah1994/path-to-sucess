@@ -107,7 +107,9 @@ ul, ol {
 }
 .menu-list a:hover{filter:brightness(.98)}
 
-/* OUR SERVICES PAGE */
+/*========================
+    OUR SERVICES PAGE 
+========================*/
 
 :root{
   --page-max:450px;
@@ -235,4 +237,65 @@ h3:nth-of-type(7)::before {background-image: url("../images/flexible-learning.pn
   body > :is(h1,h2,h3,p){padding-inline: 14px;}
   h1{ font-size: 22px;}
 
+}
+
+/*========================
+     wHY CHOOSE US PAGE
+==========================*/    
+
+:root{
+  --why-panel: #d85e67; /*rose panel*/
+  --tile-blue: #6b8fe7;
+}
+
+/*Style the Panel*/
+body > ul{
+  width: min(100%, var(--page-max));
+  margin-inline: auto;
+  margin-top: 10px;
+  padding: 18px;
+  background: var(--why-panel);
+  border-radius: 6px;
+  display: flex; /*flexbox*/
+  flex-wrap: wrap;
+  gap: 14px;
+  list-style: none;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+}
+/*Tiles*/
+body > ul li{
+  flex: 1 1 calc(50% - 14px); /*2 columns with gap*/
+  min-height: 120px;
+  border-radius: 16px;
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px;
+  font: 800 16px/1.25 "Inter", system-ui, sans-serif;
+  color: #0f0f17;
+  box-shadow: 0 4px 12px rgba(0,0,0,.06);
+}
+
+/*Color each tile*/
+body > ul > li:nth-child(1){background: var(--teal);}
+body > ul > li:nth-child(2){background: var(--tile-blue);}
+body > ul > li:nth-child(3){background: var(--yellow);}
+body > ul > li:nth-child(4){background: var(--white);
+border: 3px solid var(--tile-border);
+}
+
+/*Page Heading*/
+h1{
+  color: var(--white);
+  font-family: "Kavoon", system-ui, sans-serif;
+  font-size: 26px;
+  line-height: 1.15;
+  margin-top: 10px;
+  margin-bottom: 6px;
+  text-shadow: 0 1px 0 rgba(0,0,0,.15);
+}
+/*Responsive */
+@media (max-width: 450px){
+  body > ul > li{flex-basis: 100%; }
 }
