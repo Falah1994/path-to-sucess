@@ -106,3 +106,133 @@ ul, ol {
     text-decoration:none;  
 }
 .menu-list a:hover{filter:brightness(.98)}
+
+/* OUR SERVICES PAGE */
+
+:root{
+  --page-max:450px;
+  --panel-bg:var(--purple);
+  --kicker: var(--yellow);
+  --card-bg: var(--white);
+  --card-text: #1b1b22;
+  --card-muted: #6b6f86;
+  --card-border: #7c8fe8;
+  --card-radius: 14px;
+  --shadow-1: 0 6px 18px rgba(0,0,0,.08);
+}
+
+/* Center Column */
+body {position:relative;}
+body::before {
+  content: "";
+  position:fixed;
+  z-index: -1;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(100%, var(--page-max));
+  height: 100%;
+  background: var(--panel-bg);
+  border-radius: 6px;
+}
+
+/*Align to Column*/
+body > :is(h1,h2,h3,p){
+  width: min(100%, var(--page-max));
+  margin-inline: auto;
+  padding-inline: 18px; 
+}
+
+/*Headings*/
+h1{
+  color: var(--white);
+  font-family: "Kavoon", system-ui, sans-serif;
+  font-size: 24px;
+  line-height: 1.15;
+  margin-top: 10px;
+  margin-bottom: 2px;
+  text-shadow: 0 1px 0 rgba(0,0,0,.15);
+}
+
+h2{
+  color: var(--kicker);
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: .3px ;
+  margin: 6px 0 10px;
+}
+
+/*Service Cards*/
+
+h3{
+  background: var(--card-bg);
+  color: var(--purple);
+  border: 3px solid var(--card-border);
+  border-bottom: none;
+  border-top-left-radius: var(--card-radius);
+  border-top-right-radius: var(--card-radius);
+  padding: 14px 16px 6px;
+  font: 900 14px/1.25 "Inter", system-ui, sans-serif;
+  margin-top: 12px;
+  margin-bottom: 0;
+  box-shadow: var(--shadow-1);
+}
+
+h3 + p{
+  background: var(--card-bg);
+  color: var(--card-muted);
+  border: 3px solid var(--card-border);
+  border-top: none;
+  border-bottom-left-radius: var(--card-radius);
+  border-bottom-right-radius: var(--card-radius);
+  padding: 8px 16px 14px;
+  font: 400 14px/1.5 "Inter", system-ui, sans-serif;
+  margin-top:0;
+  margin-bottom:14px;
+  box-shadow: var(--shadow-1);
+}
+
+/*Section Spacing*/
+
+h2 + h3{margin-top: 18px;}
+
+h2:not(:first-of-type){margin-top: 20px;}
+
+
+
+/* Service Icons */
+
+h3::before{
+  content: "";
+  display: inline-block;
+  vertical-align: -6px;
+  width: 48px;
+  height: 48px;
+  margin-right: 12px;
+  border-radius: 0px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  box-shadow: none; 
+
+}
+
+/*Map each icon to its service*/
+h3:nth-of-type(1)::before {background-image: url("../images/personal-development.png");}
+h3:nth-of-type(2)::before {background-image: url("../images/career-coaching.png");}
+h3:nth-of-type(3)::before {background-image: url("../images/relationship-coaching.png");}
+h3:nth-of-type(4)::before {background-image: url("../images/supportive-community.png");}
+h3:nth-of-type(5)::before {background-image: url("../images/focused-session.png");}
+h3:nth-of-type(6)::before {background-image: url("../images/interactive-learning.png");}
+h3:nth-of-type(7)::before {background-image: url("../images/flexible-learning.png");}
+
+
+/*Responsive */
+
+@media (max-width: 480px){
+  body > :is(h1,h2,h3,p){padding-inline: 14px;}
+  h1{ font-size: 22px;}
+
+}
