@@ -107,9 +107,9 @@ ul, ol {
 }
 .menu-list a:hover{filter:brightness(.98)}
 
-/*========================
-    OUR SERVICES PAGE 
-========================*/
+/*=============================
+    OUR SERVICES PAGE STYLES
+===============================*/
 
 :root{
   --page-max:450px;
@@ -239,9 +239,9 @@ h3:nth-of-type(7)::before {background-image: url("../images/flexible-learning.pn
 
 }
 
-/*========================
-     wHY CHOOSE US PAGE
-==========================*/    
+/*=============================
+     WHY CHOOSE US PAGE STYLES
+===============================*/    
 
 :root{
   --why-panel: #d85e67; /*rose panel*/
@@ -298,4 +298,114 @@ h1{
 /*Responsive */
 @media (max-width: 450px){
   body > ul > li{flex-basis: 100%; }
+}
+
+/*========================
+     PRICING PAGE STYLES
+==========================*/ 
+
+:root{
+  --page-max:450px;
+  --pricing-panel: var(--purple);
+  --pricing-gold: var(--yellow);
+  --pricing-ink: #1b1b22;
+  --pricing-head: #2a2100;
+  --pricing-line: #EBECF6;
+}
+/* Center Column */
+body {position:relative;}
+body::before {
+  content: "";
+  position:fixed;
+  z-index: -1;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(100%, var(--page-max));
+  height: 100%;
+  background: var(--pricing-panel);
+  border-radius: 6px;
+}
+
+/*Page Constraints*/
+body > :is(h1,h2,table){
+  width: min(100%, var(--page-max));
+  margin-inline: auto;
+  padding-inline: 18px; 
+}
+
+/*Page Heading*/
+h1{
+  color: var(--white);
+  font-family: "Kavoon", system-ui, sans-serif;
+  font-size: 26px;
+  line-height: 1.15;
+  margin-top: 10px;
+  margin-bottom: 6px;
+  text-shadow: 0 1px 0 rgba(0,0,0,.15);
+}
+
+/*Yellow Subheadings*/
+h2{
+  color: var(--pricing-gold);
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: .2px ;
+  margin: 14px 0 8px;
+}
+
+/*Pricing Tables*/
+table{
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  color: var(--pricing-ink);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+}
+
+/*Header*/
+thead th{
+  background: var(--pricing-gold);
+  color: var(--pricing-head);
+  font: 900 12px/1.2 "Inter", system-ui, sans-serif;
+  letter-spacing: .3px;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+/*Rows*/
+tbody td{
+  background: var(--white);
+  padding: 12px;
+  font: 400 14px/1.5 "Inter", system-ui, sans-serif;
+  border-left: 1px solid #eeeff8;
+  border-right: 1px solid #eeeff8;
+}
+
+/*Row Separation*/
+tbody tr + tr td{
+  border-top: 1px solid var(--pricing-line);
+}
+
+/* Right Align Cost Column */
+tbody td:last-child,
+thead th:last-child{
+  text-align: right;
+  min-width: 86px;
+}
+
+/*Border Trim*/
+tbody tr:last-child td{
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* smaller screens */
+@media (max-width: 450px){
+  body > :is(h1,h2,table){padding-inline: 14px;}
+  h1{ font-size: 24px;}
 }
