@@ -413,3 +413,121 @@ tbody tr:last-child td{
 /*================================
      TAKE THE FIRST STEP STYLES
 ==================================*/ 
+
+:root{
+  --cta-rose: #d85e67;
+}
+
+/*Purple Panel*/
+body {position:relative;}
+body::before {
+  content: "";
+  position:fixed;
+  z-index: -1;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(100%, var(--page-max));
+  height: 100%;
+  background: var(--purple);
+  border-radius: 6px;
+}
+
+/* CTA Panel */
+.cta {
+  width: min(100%, var(--page-max));
+  margin: 12px auto 0;
+  padding: 24px 20px;
+  background: var(--cta-rose);
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+}
+
+/*Title*/
+.cta h1 {
+  color: var(--white);
+  font-family: "Kavoon", system-ui, sans-serif;
+  font-size: 30px;
+  line-height: 1.1;
+  margin-bottom: 12px;
+  text-shadow: 0 1px 0 rgba(0,0,0,.15);
+}
+
+/*Text*/
+.cta p {
+  color: #ffecec;
+  font: 400 15px/1.6 "Inter", system-ui, sans-serif;
+  margin-bottom: 22px;
+}
+
+/* Centered Schedule Button */
+.cta .schedule-btn {
+  display: block;
+  margin: 0 auto;
+  width: 340px;
+  max-width: 90%;
+  padding: 18px 24px;
+  background: #ffffff;
+  color: #000000;
+  font: 900 15px/1 "Inter", system-ui, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;  
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow:
+    8px 8px 0 rgba(0,0,0, 0.45),
+    0 10px 20px rgba(0,0,0, 0.12);
+  transition: all 0.2s ease;
+}
+
+.ctn-btn:hover {
+  transform: translateY(2px);
+  box-shadow:
+    7px 7px 0 rgba(0,0,0, 0.45),
+    0 8px 18px rgba(0,0,0, 0.12);
+}
+.cta-btn:active {  
+  transform: translateY(3px);
+  box-shadow:
+    6px 6px 0 rgba(0,0,0, 0.45),
+    0 6px 14px rgba(0,0,0, 0.12);
+
+}
+/*Footer*/
+.site-footer {
+  width: min(100%, var(--page-max));
+  margin: 0 auto 16px;
+  background: var(--purple);
+  color: #d7daff;
+  padding: 18px 20px;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font: 600 12px/1.4 "Inter", system-ui, sans-serif;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.footer-link {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 450px) {
+  .cta h1 {
+    font-size: 26px;
+  }
+  .cta-btn {
+    width: 90%;
+  }
+  .site-footer {
+    padding: 14px;
+    flex-direction: column;
+    gap: 6px;
+  }
+}
